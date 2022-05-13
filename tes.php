@@ -8,7 +8,6 @@ function aaa() {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://ipwhois.app/json/');
     curl_setopt($ch, CURLOPT_PROXY, $proxy);
-    curl_setopt($ch, HTTP_PROXY_REQUEST_FULLURI, false);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $curl_scraped_page = curl_exec($ch);
