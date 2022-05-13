@@ -1,17 +1,14 @@
 <?php
 
 $opts = array(
-        'http'=>array(
-            'method'=>"GET",
-            'header'=>"Accept-language: en\r\n" .
-            "Cookie: foo=bar\r\n",
-            'socks5' => '5.9.2.236:1080',
-            )
+    'http'=>array(
+        'method' => "GET",
+        'socks5' => '5.9.2.236:1080',
+    )
 );
 
 $context = stream_context_create($opts);
 
-// Open the file using the HTTP headers set above
-$file = file_get_contents('http://ifconfig.me/ip', false, $context);
+$file = file_get_contents('https://ipwhois.app/json/', false, $context);
 
-var_dump($file);
+echo $file;
