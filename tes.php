@@ -5,7 +5,7 @@ $opts = array(
             'method'=>"GET",
             'header'=>"Accept-language: en\r\n" .
             "Cookie: foo=bar\r\n",
-            'proxy' => 'tcp://5.9.2.236:1080',
+            'proxy' => '5.9.2.236:1080',
             )
 );
 
