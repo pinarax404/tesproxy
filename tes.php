@@ -1,7 +1,7 @@
 <?php
 
 $context = stream_context_create([
-    'http' => [
+    'https' => [
         'proxy' => 'wf-us-015.whiskergalaxy.com:443',
         'request_fulluri' => true
     ]
