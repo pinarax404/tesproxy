@@ -14,7 +14,7 @@ function aaa() {
     $result = file_get_contents('https://ipwhois.app/json/', false, $context);
 
     if(strpos($result, 'ip') !== false) {
-        $res_get_ip = json_decode($ret, true);
+        $res_get_ip = json_decode($result, true);
         echo "\033[1;37mIP : " . $res_get_ip['ip'] . " | Country : " . $res_get_ip['country'] . "\033[1;37m\n";
         aaa();
     } else {
