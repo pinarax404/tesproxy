@@ -1,7 +1,7 @@
 <?php
 
 $url = 'https://ipwhois.app/json/';
-$proxy = '5.9.2.236:1080';
+$proxy = 'socks5://5.9.2.236:1080';
 //$proxyauth = 'user:password';
 
 $ch = curl_init();
