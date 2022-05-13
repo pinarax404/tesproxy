@@ -1,7 +1,7 @@
 <?php
 $aContext = array(
     'http' => array(
-        'proxy'           => 'socks5://5.9.2.236:1080',
+        'proxy'           => 'https://5.9.2.236:1080',
         'request_fulluri' => true,
     ),
 );
