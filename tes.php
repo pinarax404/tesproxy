@@ -1,12 +1,6 @@
 <?php
-$aContext = array(
-    'http' => array(
-        'proxy'           => 'https://5.9.2.236:1080',
-        'request_fulluri' => true,
-    ),
-);
-$cxContext = stream_context_create($aContext);
-
-$result = file_get_contents('http://ip-api.com/json/', false, $cxContext);
-
-echo $result;
+$w = stream_get_wrappers();
+echo 'openssl: ',  extension_loaded  ('openssl') ? 'yes':'no', "\n";
+echo 'http wrapper: ', in_array('http', $w) ? 'yes':'no', "\n";
+echo 'https wrapper: ', in_array('https', $w) ? 'yes':'no', "\n";
+echo 'wrappers: ', var_export($w);
