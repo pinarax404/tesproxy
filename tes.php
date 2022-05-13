@@ -5,7 +5,10 @@ aaa();
 function aaa() {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, 'https://ipwhois.app/json/');
-    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS);
+    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTPS);
+    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS4);
+    curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
     curl_setopt($ch, CURLOPT_PROXY, '5.9.2.236:1080');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // read more about HTTPS http://stackoverflow.com/questions/31162706/how-to-scrape-a-ssl-or-https-url/31164409#31164409
