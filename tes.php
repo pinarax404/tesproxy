@@ -5,7 +5,7 @@ aaa();
 function aaa() {
     $opts = array('http' =>
         array(
-            'proxy'  => 'https://us-central-062.whiskergalaxy.com:443',
+            'proxy'  => 'us-central-062.whiskergalaxy.com:443',
         )
     );
 
