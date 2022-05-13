@@ -9,7 +9,7 @@ function aaa() {
     curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTPS);
     curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS4);
     curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
-    curl_setopt($ch, CURLOPT_PROXY, 'us-central-071.whiskergalaxy.com:443');
+    curl_setopt($ch, CURLOPT_PROXY, 'us29.tcdn.me:443');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // read more about HTTPS http://stackoverflow.com/questions/31162706/how-to-scrape-a-ssl-or-https-url/31164409#31164409
     curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
