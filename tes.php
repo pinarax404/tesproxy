@@ -7,6 +7,7 @@ $context = stream_context_create([
     ]
 ]);
 
+$context = stream_context_create($context);
 $result = file_get_contents('http://ip-api.com/json/', false, $context);
 
 echo $result;
