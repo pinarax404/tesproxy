@@ -3,18 +3,16 @@
 aaa();
 
 function aaa() {
-    $opts = array('http' =>
-        array(
-            'proxy'  => '5.9.2.236:1080',
-            'request_fulluri' => false
-        )
-    );
-
-    $context  = stream_context_create($opts);
-    $result = file_get_contents('https://ipwhois.app/json/', false, $context);
-
-    if(strpos($result, 'ip') !== false) {
-        $res_get_ip = json_decode($result, true);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, 'https://ipwhois.app/json/');
+    curl_setopt($ch, CURLOPT_PROXY, '5.9.2.236:1080');
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // read more about HTTPS http://stackoverflow.com/questions/31162706/how-to-scrape-a-ssl-or-https-url/31164409#31164409
+    curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+    $output = curl_exec($ch);
+    curl_close($ch);
+    if(strpos($output, 'ip') !== false) {
+        $res_get_ip = json_decode($output, true);
         echo "\033[1;37mIP : " . $res_get_ip['ip'] . " | Country : " . $res_get_ip['country'] . "\033[1;37m\n";
         aaa();
     } else {
