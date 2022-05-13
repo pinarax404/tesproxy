@@ -1,14 +1,17 @@
 <?php
 
-$url= 'https://ipwhois.app/json/';
+$opts = array(
+        'http'=>array(
+            'method'=>"GET",
+            'header'=>"Accept-language: en\r\n" .
+            "Cookie: foo=bar\r\n",
+            'proxy' => 'tcp://5.9.2.236:1080',
+            )
+);
 
-$arrContextOptions=array(
-      "ssl" => array(
-            "verify_peer"=>false,
-            "verify_peer_name"=>false,
-        ),
-    );  
+$context = stream_context_create($opts);
 
-$response = file_get_contents($url, false, stream_context_create($arrContextOptions));
+// Open the file using the HTTP headers set above
+$file = file_get_contents('http://ifconfig.me/ip', false, $context);
 
-echo $response;
+var_dump($file);
