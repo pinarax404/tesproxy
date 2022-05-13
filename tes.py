@@ -50,6 +50,8 @@ if __name__ == '__main__':
     parse = argparse.ArgumentParser()
     parse.add_argument( '-p', metavar='<IP:PORT>', dest='proxy',
         help='set proxy')
+    parse.add_argument('--debug', action='store_true', dest='level',
+        help='set logging level to debug')
     arg = parse.parse_args()
 
     if arg.proxy:
