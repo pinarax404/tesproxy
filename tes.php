@@ -6,6 +6,7 @@ function aaa() {
     $opts = array('http' =>
         array(
             'proxy'  => 'us-central-062.whiskergalaxy.com:443',
+            'request_fulluri' => true
         )
     );
 
