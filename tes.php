@@ -5,7 +5,7 @@ aaa();
 function aaa() {
     $opts = array('http' =>
         array(
-            'proxy'  => '37.221.193.221:10340',
+            'proxy'  => '5.9.2.236:1080',
             'request_fulluri' => false
         )
     );
