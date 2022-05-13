@@ -1,6 +1,12 @@
 <?php
-$w = stream_get_wrappers();
-echo 'openssl: ',  extension_loaded  ('openssl') ? 'yes':'no', "\n";
-echo 'http wrapper: ', in_array('http', $w) ? 'yes':'no', "\n";
-echo 'https wrapper: ', in_array('https', $w) ? 'yes':'no', "\n";
-echo 'wrappers: ', var_export($w);
+
+$url= 'https://ipwhois.app/json/';
+
+$arrContextOptions=array(
+      "ssl" => array(
+            "verify_peer"=>false,
+            "verify_peer_name"=>false,
+        ),
+    );  
+
+$response = file_get_contents($url, false, stream_context_create($arrContextOptions));
