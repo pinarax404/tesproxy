@@ -1,7 +1,7 @@
 <?php
 $aContext = array(
     'http' => array(
-        'proxy'           => 'tcp://5.9.2.236:1080',
+        'proxy'           => '5.9.2.236:1080',
         'request_fulluri' => true,
     ),
 );
