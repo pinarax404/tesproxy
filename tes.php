@@ -10,3 +10,5 @@ $arrContextOptions=array(
     );  
 
 $response = file_get_contents($url, false, stream_context_create($arrContextOptions));
+
+echo $response;
