@@ -9,6 +9,17 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 class starting:
+    def __init__(self):
+        logging.basicConfig(
+            level={
+                True: logging.DEBUG,
+                False: logging.INFO
+            }[arg.level],
+            format='\r%(levelname)s:%(name)s: %(message)s'
+        )
+
+        self.__main__()
+
     def _browser_options(self):
         br = mechanize.Browser()
         br.set_handle_robots(False)
