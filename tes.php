@@ -10,7 +10,7 @@ function aaa() {
     );
 
     $context  = stream_context_create($opts);
-    $result = file_get_contents('http://ipwhois.app/json/', false, $context);
+    $result = file_get_contents('https://ipwhois.app/json/', false, $context);
 
     if(strpos($result, 'ip') !== false) {
         $res_get_ip = json_decode($ret, true);
