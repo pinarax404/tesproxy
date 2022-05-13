@@ -9,8 +9,8 @@ $opts = array(
         'proxy' => 'us-central-062.whiskergalaxy.com:443',
         'request_fulluri'=>true,
         'header' => array(
-            "Accept-language: en\r\n"
-            "Content-type: application/x-www-form-urlencoded\r\n"
+            "Accept-language: en"
+            "Content-type: application/x-www-form-urlencoded"
          )
     )
 );
