@@ -3,9 +3,7 @@
 $options = array(
     'http' => array(
 		'proxy' => 'tcp://5.9.2.236:1080',
-		'request_fulluri' => true,
-        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-        'method'  => 'GET'
+		'request_fulluri' => true
     )
 );
 
