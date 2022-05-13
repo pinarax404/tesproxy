@@ -3,6 +3,7 @@
 aaa();
 
 function aaa() {
+    $c = curl_init();
     curl_setopt($c, CURLOPT_URL, 'https://ipwhois.app/json/');
     curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($c, CURLOPT_SSL_VERIFYPEER, false);
