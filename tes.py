@@ -3,8 +3,8 @@ import requests
 
 session = requesocks.session()
 session.proxies = {
-    'http': 'socks5://127.0.0.1:9050',
-    'https': 'socks5://127.0.0.1:9050'
+    'http': 'socks5://localhost:9050',
+    'https': 'socks5://localhost:9050'
 }
 r = session.get('https://www.instagram.com')
 print(r.status_code)
