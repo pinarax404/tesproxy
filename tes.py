@@ -1,9 +1,12 @@
 import requesocks
 import requests
 
-s = requesocks.session()
-s.proxies = {'http':  'socks5://localhost:9050',
-            'https': 'socks5://localhost:9050'}
-
-s.get('https://ipwhois.app/json/').json()
-print(s)
+session = requesocks.session()
+session.proxies = {
+    'http': 'socks5://127.0.0.1:9050',
+    'https': 'socks5://127.0.0.1:9050'
+}
+r = session.get('https://ipwhois.app/json/')
+print(r.status_code)
+print(r.headers['content-type'])
+print(r.text)
